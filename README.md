@@ -1,1 +1,1 @@
-# learning-elixir
+# Learning Elixir

@@ -13,4 +13,5 @@ defmodule Fibonacci do
   end
 end
 
-Enum.map(1..10, fn n -> IO.puts(Fibonacci.calc(n)) end)
+# Enum.map(1..10, fn n -> IO.puts(Fibonacci.calc(n)) end)
+Enum.map(1..10, &IO.puts(Fibonacci.calc(&1)))

@@ -8,4 +8,5 @@ defmodule Factorial do
   end
 end
 
-Enum.map(1..10, fn n -> IO.puts("Factorial of #{n} is #{Factorial.calc(n)}.\n") end)
+# Enum.map(1..10, fn n -> IO.puts("Factorial of #{n} is #{Factorial.calc(n)}.\n") end)
+Enum.map(1..10, &IO.puts("Factorial of #{&1} is #{Factorial.calc(&1)}.\n"))

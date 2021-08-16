@@ -16,7 +16,8 @@ defmodule FooBar do
   end
 
   def print(max) do
-    Enum.map(1..max, fn n -> IO.puts(foobar(n)) end)
+    # Enum.map(1..max, fn n -> IO.puts(foobar(n)) end)
+    Enum.map(1..max, &IO.puts(foobar(&1)))
   end
 end
 
