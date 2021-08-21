@@ -1,9 +1,19 @@
 defmodule FindItems do
-  def find(n,list) when n > 0 do
+  def find(n,arr) when length(arr)>1 do
     # divide list
-    find(n,list)
-    find(n,list)
+    {low,high} = Enum.split(arr,div(length(arr),2))
+    # IO.puts(low)
+    # IO.puts(high)
+    find(n,low)
+    find(n,high)
+  end
+
+  def find(n,arr) when length(arr)==1 do
+    if Enum.member?(arr,n) do
+      "Ok!"
+    end
   end
 end
 
-IO.puts(FindItems.find(7,Enum.to_list(1..100)))
+# IO.puts(FindItems.find(7,Enum.to_list(1..10)))
+IO.puts(FindItems.find(1,[1]))
