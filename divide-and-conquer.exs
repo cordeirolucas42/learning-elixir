@@ -4,8 +4,7 @@ defmodule FindItems do
     {low,high} = Enum.split(arr,div(length(arr),2))
     # IO.puts(low)
     # IO.puts(high)
-    find(n,low)
-    find(n,high)
+    [find(n,low),find(n,high)]
   end
 
   def find(n,arr) when length(arr)==1 do
@@ -16,4 +15,4 @@ defmodule FindItems do
 end
 
 # IO.puts(FindItems.find(7,Enum.to_list(1..10)))
-IO.puts(FindItems.find(1,[1]))
+IO.puts("#{inspect FindItems.find(99,Enum.to_list(1..100))}")
